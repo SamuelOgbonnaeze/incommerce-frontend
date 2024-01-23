@@ -19,8 +19,8 @@ const Summary = () => {
             toast.success("Payment completed.")
             removeAll()
         }
-        if (searchParams.get("canceled")){
-        toast.error("Something went wrong.")
+        if (searchParams.get("canceled")) {
+            toast.error("Something went wrong.")
         }
     }, [searchParams, removeAll])
 
@@ -47,7 +47,7 @@ const Summary = () => {
                     <Currency value={totalPrice} />
                 </div>
             </div>
-            <Button onClick={onCheckout} className="w-full mt-6">
+            <Button disabled={items.length === 0} onClick={onCheckout} className="w-full mt-6">
                 Checkout
             </Button>
         </div>

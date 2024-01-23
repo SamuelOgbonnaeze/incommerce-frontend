@@ -30,6 +30,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
              transistion
 
         `, className)}
+            disabled={disabled}
             ref={ref}
             {...props}
         >
